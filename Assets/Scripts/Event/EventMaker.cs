@@ -13,6 +13,7 @@ public class EventMaker : MonoBehaviour
     ImDelegate _customDelegate;
 
     Action<int> _customAction;
+    Func<int> _customFunc;
 
     private void Start()
     {
