@@ -21,11 +21,20 @@ public class EventMaker : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             _customDelegate += InvokeEventTwo;
+            _customDelegate += InvokeEventThree;
+            _customDelegate += InvokeEventFour;
             //InvokeEvent();
             _customDelegate();
-
-            _customDelegate -= InvokeEventTwo;
         }
+    }
+
+    private int InvokeEventFour()
+    {
+        return 10;
+    }
+
+    private void InvokeEventThree(int abc)
+    {
     }
 
     private void InvokeEventTwo()
