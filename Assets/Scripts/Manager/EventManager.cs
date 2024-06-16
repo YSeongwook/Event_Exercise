@@ -3,11 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 
+public interface IEventMake
+{
+    public void Subscribe(bool isSubscribe, Action callback);
+}
+
 public class EventManager
 {
     private static EventManager _instance = null;
 
-    private EventMaker _currentEventMaker;
+    private IEventMake _currentEventMaker;
     private List<Action> _actionSubscribeRequestList = new List<Action>();
 
 
@@ -23,7 +28,7 @@ public class EventManager
         }
     }
 
-    public void RegisterCurEventMaker(bool isRegister, EventMaker eventManer)
+    public void RegisterCurEventMaker(bool isRegister, IEventMake eventManer)
     {
         if (isRegister)
         {

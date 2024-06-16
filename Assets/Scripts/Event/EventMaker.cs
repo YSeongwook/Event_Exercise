@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventMaker : MonoBehaviour
+public class EventMaker : MonoBehaviour, IEventMake
 {
     [SerializeField] Animator Animator_Player;
 
