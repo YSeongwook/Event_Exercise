@@ -19,5 +19,11 @@ public class EventMaker : MonoBehaviour
     private void InvokeEvent()
     {
         Animator_Player.SetTrigger("Atk");
+
+        if (Member_One)
+            Member_One.OnEventMakerInvoked();
+
+        if (Member_Two)
+            Member_Two.OnEventLalala();
     }
 }
