@@ -14,6 +14,7 @@ public class EventMaker : MonoBehaviour
 
     Action<int> _customAction;
     Func<int> _customFunc;
+    Func<int, string, bool> _specialFunc;
 
     private void Start()
     {
@@ -33,12 +34,22 @@ public class EventMaker : MonoBehaviour
             _customFunc = InvokeEventFour;
             int result = _customFunc.Invoke();
 
-            _customFunc = InvokeEventTwo;
+            _specialFunc = SpecialFunc;
+            
+            if(_specialFunc(8, "안녕"))
+            {
+                Debug.Log("오~");
+            }
 
             //_customDelegate = InvokeEventTwo;
             //InvokeEvent();
             //_customDelegate();
         }
+    }
+
+    private bool SpecialFunc(int number, string bText)
+    {
+        return (number < 10) && (bText == "안녕");
     }
 
     private int InvokeEventFour()
