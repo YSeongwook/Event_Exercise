@@ -10,6 +10,11 @@ public class EventMaker : MonoBehaviour
 
     delegate void ImDelegate();
 
+    private void Start()
+    {
+        ImDelegate _customDelegate = new ImDelegate(InvokeEvent);
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
