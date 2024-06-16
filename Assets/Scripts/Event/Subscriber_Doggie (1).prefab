@@ -1087,6 +1087,7 @@ GameObject:
   - component: {fileID: 4137321679708584441}
   - component: {fileID: 4137321679708584440}
   - component: {fileID: 4137321679708584443}
+  - component: {fileID: 6691767110850385058}
   m_Layer: 0
   m_Name: Subscriber_Doggie (1)
   m_TagString: Untagged
@@ -1149,6 +1150,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.9839783
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &6691767110850385058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4137321679708584442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948d96285db2ae54fb3a479d0eae12aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4137321679731994105
 GameObject:
   m_ObjectHideFlags: 0
