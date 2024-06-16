@@ -433,6 +433,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1603927150781757499, guid: 1ca22401fb55fc345812948487524877, type: 3}
+      propertyPath: EventMaker_Publisher
+      value: 
+      objectReference: {fileID: 4722395475356215885}
     - target: {fileID: 3637025045044249420, guid: 1ca22401fb55fc345812948487524877, type: 3}
       propertyPath: m_Name
       value: Subscriber_Doggie
@@ -549,6 +553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Subscriber_Doggie (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6691767110850385058, guid: 593ff6bdd1bde044588d5e70c2faa4aa, type: 3}
+      propertyPath: EventMaker_Publisher
+      value: 
+      objectReference: {fileID: 4722395475356215885}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 593ff6bdd1bde044588d5e70c2faa4aa, type: 3}
 --- !u!114 &4137321680683525607 stripped
@@ -560,6 +568,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 948d96285db2ae54fb3a479d0eae12aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4722395475356215885 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7718550088516915477, guid: 589456db8a0f80742aad79a30d5f58ee, type: 3}
+  m_PrefabInstance: {fileID: 6740815511715674676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aed567071e15034f97f7f1964078e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &6740815511715674676
