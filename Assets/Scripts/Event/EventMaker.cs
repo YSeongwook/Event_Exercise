@@ -20,9 +20,15 @@ public class EventMaker : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            _customDelegate = InvokeEventTwo;
             //InvokeEvent();
             _customDelegate();
         }
+    }
+
+    private void InvokeEventTwo()
+    {
+        Animator_Player.SetTrigger("LevelUp");
     }
 
     private void InvokeEvent()
