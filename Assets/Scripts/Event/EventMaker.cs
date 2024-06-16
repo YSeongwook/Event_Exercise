@@ -9,17 +9,19 @@ public class EventMaker : MonoBehaviour
     [SerializeField] Animator Animator_Player;
 
     delegate void ImDelegate();
+    ImDelegate _customDelegate;
 
     private void Start()
     {
-        ImDelegate _customDelegate = new ImDelegate(InvokeEvent);
+        _customDelegate = new ImDelegate(InvokeEvent);
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            InvokeEvent();
+            //InvokeEvent();
+            _customDelegate();
         }
     }
 
