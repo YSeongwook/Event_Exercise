@@ -8,6 +8,7 @@ public class EventManager
     private static EventManager _instance = null;
 
     private EventMaker _currentEventMaker;
+    private List<Action> _actionSubscribeRequestList = new List<Action>();
 
 
     public static EventManager Inst
@@ -25,10 +26,25 @@ public class EventManager
     public void RegisterCurEventMaker(bool isRegister, EventMaker eventManer)
     {
         if (isRegister)
+        {
             _currentEventMaker = eventManer;
+            CheckSubscribeRequestList();
+        }
         else
         {
             _currentEventMaker = null;
+        }
+    }
+
+    private void CheckSubscribeRequestList()
+    {
+        if (_actionSubscribeRequestList.Count > 0)
+        {
+            foreach (var action in _actionSubscribeRequestList)
+            {
+                _currentEventMaker.Subscribe(true, action);
+            }
+            _actionSubscribeRequestList.Clear();
         }
     }
 
@@ -36,6 +52,7 @@ public class EventManager
     {
         if(_currentEventMaker == null)
         {
+            _actionSubscribeRequestList.Add(callback);
             return;
         }
 
