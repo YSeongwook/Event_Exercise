@@ -9,12 +9,22 @@ public class SubsMemberOne : MonoBehaviour
 
     private void OnEnable()
     {
-        EventMaker_Publisher.Subscribe(isSubscribe:true, OnEventMakerInvoked);
+        var gObj = GameObject.Find("Invoker");
+        EventMaker_Publisher = gObj.GetComponent<EventMaker>();
+
+        if(EventMaker_Publisher != null)
+        {
+            EventMaker_Publisher.Subscribe(isSubscribe: true, OnEventMakerInvoked);
+        }
     }
 
     private void OnDisable()
     {
-        EventMaker_Publisher.Subscribe(isSubscribe:false, OnEventMakerInvoked);
+        if(EventMaker_Publisher != null)
+        {
+            EventMaker_Publisher.Subscribe(isSubscribe: false, OnEventMakerInvoked);
+        }
+
     }
 
     public void OnEventMakerInvoked()
