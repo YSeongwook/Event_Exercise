@@ -23,6 +23,7 @@ public class EventMaker : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            _customAction.Invoke();
             _customDelegate = InvokeEventTwo;
             //InvokeEvent();
             _customDelegate();
