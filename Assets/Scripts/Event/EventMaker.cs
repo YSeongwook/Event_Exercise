@@ -12,7 +12,7 @@ public class EventMaker : MonoBehaviour
     delegate void ImDelegate();
     ImDelegate _customDelegate;
 
-    Action _customAction;
+    Action<int> _customAction;
 
     private void Start()
     {
@@ -23,10 +23,10 @@ public class EventMaker : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            _customAction = InvokeEvent;
+            _customAction = InvokeEventThree;
 
 
-            _customAction.Invoke();
+            _customAction.Invoke(100);
             //_customDelegate = InvokeEventTwo;
             //InvokeEvent();
             //_customDelegate();
