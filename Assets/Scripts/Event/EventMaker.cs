@@ -11,6 +11,7 @@ public class EventMaker : MonoBehaviour
 
     private void Start()
     {
+        EventManager.Inst.RegisterCurEventMaker(true, this);
     }
 
     // 보통 Subscribe보다 Register 또는 AddEvent 등의 용어를 쓴다 - 예제는 구독이라는 의미로 그냥 사용

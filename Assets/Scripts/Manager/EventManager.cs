@@ -22,7 +22,7 @@ public class EventManager
         }
     }
 
-    private void RegisterCurEventMaker(bool isRegister, EventMaker eventManer)
+    public void RegisterCurEventMaker(bool isRegister, EventMaker eventManer)
     {
         if (isRegister)
             _currentEventMaker = eventManer;
@@ -32,7 +32,7 @@ public class EventManager
         }
     }
 
-    private void RequestSubscribe(bool isSubscribe, Action callback)
+    public void RequestSubscribe(bool isSubscribe, Action callback)
     {
         if(_currentEventMaker == null)
         {
