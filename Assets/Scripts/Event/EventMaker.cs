@@ -28,6 +28,12 @@ public class EventMaker : MonoBehaviour
 
 
             _customAction.Invoke(100);
+
+
+            _customFunc = InvokeEventFour;
+            int result = _customFunc.Invoke();
+
+
             //_customDelegate = InvokeEventTwo;
             //InvokeEvent();
             //_customDelegate();
