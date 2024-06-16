@@ -7,8 +7,20 @@ public class EventMaker : MonoBehaviour
 {
     [SerializeField] Animator Animator_Player;
 
+    public delegate void ImDelegate();
+    ImDelegate _delegate;
+
     private void Start()
     {
+    }
+
+    // 보통 Subscribe보다 Register 또는 AddEvent 등의 용어를 쓴다 - 예제는 구독이라는 의미로 그냥 사용
+    public void Subscribe(bool isSubscribe, ImDelegate callback)
+    {
+        if (isSubscribe)
+            _delegate += callback;
+        else
+            _delegate -= callback;
     }
 
     private void Update()
