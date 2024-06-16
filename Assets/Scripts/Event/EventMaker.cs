@@ -39,5 +39,7 @@ public class EventMaker : MonoBehaviour
     private void InvokeEvent()
     {
         Animator_Player.SetTrigger("Atk");
+        _delegate();
+        //_delegate.Invoke();
     }
 }
