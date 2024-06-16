@@ -7,9 +7,6 @@ public class EventMaker : MonoBehaviour
 {
     [SerializeField] Animator Animator_Player;
 
-    public delegate void ImDelegate();
-    ImDelegate _delegate;
-
     Action _eventInvokHandler;
 
     private void Start()
@@ -31,11 +28,6 @@ public class EventMaker : MonoBehaviour
         {
             InvokeEvent();
         }
-    }
-
-    private void InvokeEventTwo()
-    {
-        Animator_Player.SetTrigger("LevelUp");
     }
 
     private void InvokeEvent()
