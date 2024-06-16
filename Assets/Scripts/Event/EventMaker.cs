@@ -10,17 +10,19 @@ public class EventMaker : MonoBehaviour
     public delegate void ImDelegate();
     ImDelegate _delegate;
 
+    Action _eventInvokHandler;
+
     private void Start()
     {
     }
 
     // 보통 Subscribe보다 Register 또는 AddEvent 등의 용어를 쓴다 - 예제는 구독이라는 의미로 그냥 사용
-    public void Subscribe(bool isSubscribe, ImDelegate callback)
+    public void Subscribe(bool isSubscribe, Action callback)
     {
         if (isSubscribe)
-            _delegate += callback;
+            _eventInvokHandler += callback;
         else
-            _delegate -= callback;
+            _eventInvokHandler -= callback;
     }
 
     private void Update()
@@ -39,7 +41,6 @@ public class EventMaker : MonoBehaviour
     private void InvokeEvent()
     {
         Animator_Player.SetTrigger("Atk");
-        _delegate();
-        //_delegate.Invoke();
+        _eventInvokHandler.Invoke();
     }
 }
