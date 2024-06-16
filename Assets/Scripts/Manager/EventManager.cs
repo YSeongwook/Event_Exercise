@@ -1,9 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 
 public class EventManager
 {
     private static EventManager _instance = null;
+
+    private EventMaker _currentEventMaker;
+
 
     public static EventManager Inst
     {
@@ -14,6 +19,16 @@ public class EventManager
                 _instance = new EventManager();
             }
             return _instance;
+        }
+    }
+
+    private void RegisterCurEventMaker(bool isRegister, EventMaker eventManer)
+    {
+        if (isRegister)
+            _currentEventMaker = eventManer;
+        else
+        {
+            _currentEventMaker = null;
         }
     }
 }
