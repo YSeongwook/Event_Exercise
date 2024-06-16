@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class EventMaker : MonoBehaviour
 {
-    [SerializeField] SubsMemberOne Member_One;
-    [SerializeField] SubsMemberTwo Member_Two;
     [SerializeField] Animator Animator_Player;
 
     private void Start()
@@ -17,6 +15,7 @@ public class EventMaker : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            InvokeEvent();
         }
     }
 
@@ -28,11 +27,5 @@ public class EventMaker : MonoBehaviour
     private void InvokeEvent()
     {
         Animator_Player.SetTrigger("Atk");
-
-        if (Member_One)
-            Member_One.OnEventMakerInvoked();
-
-        if (Member_Two)
-            Member_Two.OnEventLalala();
     }
 }
