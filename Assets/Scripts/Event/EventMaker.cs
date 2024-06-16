@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class EventMaker : MonoBehaviour
 
     delegate void ImDelegate();
     ImDelegate _customDelegate;
+
+    Action _customAction;
 
     private void Start()
     {
