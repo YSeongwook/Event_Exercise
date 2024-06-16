@@ -8,6 +8,8 @@ public class EventMaker : MonoBehaviour
     [SerializeField] SubsMemberTwo Member_Two;
     [SerializeField] Animator Animator_Player;
 
+    delegate void ImDelegate();
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
