@@ -4,5 +4,11 @@ using UnityEngine;
 
 public class SubsMemberOne : MonoBehaviour
 {
+    [SerializeField] Animator Animator_SubMember;
+
+    public void OnEventMakerInvoked()
+    {
+        Animator_SubMember.SetTrigger("Atk");
+    }
 
 }
