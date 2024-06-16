@@ -31,4 +31,14 @@ public class EventManager
             _currentEventMaker = null;
         }
     }
+
+    private void RequestSubscribe(bool isSubscribe, Action callback)
+    {
+        if(_currentEventMaker == null)
+        {
+            return;
+        }
+
+        _currentEventMaker.Subscribe(isSubscribe, callback);
+    }
 }
